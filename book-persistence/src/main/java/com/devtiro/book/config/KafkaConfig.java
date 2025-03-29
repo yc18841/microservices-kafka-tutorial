@@ -11,7 +11,7 @@ import org.springframework.kafka.config.TopicBuilder;
 public class KafkaConfig {
 
     @Bean
-    public NewTopic booksPublishedTopic(final KafkaConfigProps kafkaConfigProps) {
+    NewTopic booksPublishedTopic(final KafkaConfigProps kafkaConfigProps) {
         return TopicBuilder.name(kafkaConfigProps.getTopic())
                 .partitions(10)
                 .replicas(1)
